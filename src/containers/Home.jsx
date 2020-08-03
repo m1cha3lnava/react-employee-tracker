@@ -7,7 +7,6 @@ class Home extends Component {
     searchValue: "",
     employees: [],
     value: "",
-    firstName: "",
   };
 
   componentDidMount() {
@@ -22,26 +21,49 @@ class Home extends Component {
 
   handleOnChange = (event) => {
     this.setState({ value: event.target.value });
+    console.log(this.state.value);
+    this.handleSearch();
   };
 
-  handleSearch = (searchedItem) => {
-    const filteredEmps = this.state.employees.filter(
-      (employee) => employee.name.last = searchedItem
+  handleSearch = () => {
+    const filtered = this.state.employees.filter((emp) =>
+      emp.name.first.includes(this.state.value)
     );
-    this.setState({ employees: filteredEmps });
+    this.setState({ employees: filtered });
+  };
+  handleSort = (type) => {
+    const sortedEmployees = this.state.employees.sort((a, b) => {
+      if (type === "ascending") {
+        return a.name.last.localeCompare(b.name.last);
+      } else {
+        return b.name.last.localeCompare(a.name.last);
+      }
+    });
+
+    this.setState({ employees: sortedEmployees });
   };
 
   render() {
     return (
       <div className="container">
-        this.handleSearch(this.state.value)
         <input
           value={this.state.value}
-          firstName="firstName"
           onChange={this.handleOnChange}
           type="text"
           placeholder="First Name"
         />
+        <button
+          className="btn btn-info"
+          onClick={() => this.handleSort("ascending")}
+        >
+          Sort Ascending by last name
+        </button>
+        <button
+          className="btn btn-info"
+          onClick={() => this.handleSort("descending")}
+        >
+          Sort Descending by last name
+        </button>
         <div className="row">
           <div className="col-12">
             <h1 className="text-center">This is my homepage</h1>

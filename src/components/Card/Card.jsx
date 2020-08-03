@@ -1,7 +1,7 @@
 import React from "react";
 import "./Card.css";
 
-const Card = ({key, image, id, firstName, lastName, location, email, phone}) => {
+const Card = ({ image, id, firstName, lastName, location, email, phone }) => {
   return (
     <div className="card">
       <div className="img-container">
@@ -9,7 +9,7 @@ const Card = ({key, image, id, firstName, lastName, location, email, phone}) => 
       </div>
       <div className="content">
         <ul>
-        <li>
+          <li>
             <strong>ID:</strong> {id}
           </li>
           <li>

@@ -18,16 +18,15 @@ class Home extends Component {
         console.log(err);
       });
   }
-
   handleOnChange = (event) => {
     this.setState({ value: event.target.value });
-    console.log(this.state.value);
+    // console.log(this.state.value);
     this.handleSearch();
   };
 
   handleSearch = () => {
     const filtered = this.state.employees.filter((emp) =>
-      emp.name.first.includes(this.state.value)
+      emp.name.last.includes(this.state.value)
     );
     this.setState({ employees: filtered });
   };
@@ -39,36 +38,49 @@ class Home extends Component {
         return b.name.last.localeCompare(a.name.last);
       }
     });
-
     this.setState({ employees: sortedEmployees });
   };
 
   render() {
     return (
-      <div className="container">
-        <input
-          value={this.state.value}
-          onChange={this.handleOnChange}
-          type="text"
-          placeholder="First Name"
-        />
-        <button
-          className="btn btn-info"
-          onClick={() => this.handleSort("ascending")}
-        >
-          Sort Ascending by last name
-        </button>
-        <button
-          className="btn btn-info"
-          onClick={() => this.handleSort("descending")}
-        >
-          Sort Descending by last name
-        </button>
-        <div className="row">
-          <div className="col-12">
-            <h1 className="text-center">This is my homepage</h1>
+      <div className="container bg-light">
+        <div className="col-12 bg-dark text-white" id="title">
+          <h1 className="text-center">Employee Tracker</h1>
+        </div>
+        <div className="row bg-light">
+          <div className="col">
+            <div className="row"></div>
+            <h5>Sort by Last Name</h5>
+            <button
+              className="btn btn-info my-2 my-sm-0"
+              onClick={() => this.handleSort("ascending")}
+            >
+              Ascending
+            </button>
+            <button
+              className="btn btn-info"
+              onClick={() => this.handleSort("descending")}
+            >
+              Descending
+            </button>
           </div>
+          <div className="col text-center">
+            <br></br>
+            <h4>OR</h4>
+          </div>
+          <div className="col">
+            <h5>Search by Last Name</h5>
+            <input
+              value={this.state.value}
+              onChange={this.handleOnChange}
+              type="text"
+              placeholder="Last Name"
+            />
+          </div>
+        </div>
+        <div className="row"></div>
 
+        <div className="row">
           {this.state.employees.map((employee) => (
             <Card
               key={employee.login.uuid}
@@ -76,7 +88,8 @@ class Home extends Component {
               id={employee.id.value}
               firstName={employee.name.first}
               lastName={employee.name.last}
-              location={employee.location.city}
+              city={employee.location.city}
+              country={employee.location.country}
               email={employee.email}
               phone={employee.phone}
             />

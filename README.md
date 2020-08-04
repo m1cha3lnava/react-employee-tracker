@@ -2,7 +2,7 @@
 
   ## Description
 
-  This app displays a 50 randomly generatted employees and lets you sort by and search for last name and then generates a card for each employee on the page.
+  This mobile responsive app displays a 50 randomly generated employees and lets you sort by and search for last name and then generates a card for each employee on the page.
 
   ## Table of contents
 
@@ -20,9 +20,6 @@
 
   ## Usage
   The search function searches the whole word for what you enter in the box.
-
-  ## Screenshots
-  
 
   ## Tests
   N/A

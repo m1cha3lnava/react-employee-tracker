@@ -4,7 +4,6 @@ import Axios from "axios";
 
 class Home extends Component {
   state = {
-    searchValue: "",
     employees: [],
     value: "",
   };
@@ -20,7 +19,6 @@ class Home extends Component {
   }
   handleOnChange = (event) => {
     this.setState({ value: event.target.value });
-    // console.log(this.state.value);
     this.handleSearch();
   };
 
@@ -29,6 +27,16 @@ class Home extends Component {
       emp.name.last.includes(this.state.value)
     );
     this.setState({ employees: filtered });
+  };
+  handleClear = () => {
+    this.setState({ value: "" });
+    Axios.get("https://randomuser.me/api/?results=50")
+      .then((data) => {
+        this.setState({ employees: data.data.results });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   handleSort = (type) => {
     const sortedEmployees = this.state.employees.sort((a, b) => {
@@ -48,7 +56,7 @@ class Home extends Component {
           <h1 className="text-center">Employee Tracker</h1>
         </div>
         <div className="row bg-light">
-          <div className="col">
+          <div className="col-l">
             <div className="row"></div>
             <h5>Sort by Last Name</h5>
             <button
@@ -66,16 +74,17 @@ class Home extends Component {
           </div>
           <div className="col text-center">
             <br></br>
-            <h4>OR</h4>
           </div>
-          <div className="col">
+          <div className="col-l">
             <h5>Search by Last Name</h5>
             <input
+              className="input-group"
               value={this.state.value}
               onChange={this.handleOnChange}
               type="text"
               placeholder="Last Name"
             />
+            <button onClick={() => this.handleClear()}>Clear</button>
           </div>
         </div>
         <div className="row"></div>

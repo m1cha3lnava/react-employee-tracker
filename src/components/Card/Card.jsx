@@ -14,27 +14,21 @@ const Card = ({
   return (
     <div className="card">
       <div className="img-container">
-        <img alt={firstName} src={image} />
+        <img alt={id} src={image} />
       </div>
       <div className="content">
         <ul>
           <li>
-            <strong>ID:</strong> {id}
-          </li>
-          <li>
-            <strong>First Name:</strong> {firstName}
-          </li>
-          <li>
-            <strong>Last Name:</strong> {lastName}
+            <strong>Name:</strong> {firstName} {lastName}
           </li>
           <li>
             <strong>Location:</strong> {city}, {country}
           </li>
           <li>
-            <strong>Email:</strong> {email}
+            <strong>Phone:</strong> {phone}
           </li>
           <li>
-            <strong>Phone:</strong> {phone}
+            <strong>Email:</strong> {email}
           </li>
         </ul>
       </div>

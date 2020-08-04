@@ -1,45 +1,62 @@
-# Unit 19 React Homework: Employee Directory
+# react-employee-tracker
 
-## Overview
+  ## Description
 
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+  This app displays a 50 randomly generatted employees and lets you sort by and search for last name and then generates a card for each employee on the page.
 
-## User Story
+  ## Table of contents
 
-- As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+  - [Installation] (#installation)
+  - [Usage] (#usage)
+  - [Tests] (#tests)
+  - [Contributing] (#contributing)
+  - [Questions] (#questions)
+  - [License] (#license)
+  
+  ## Installation
 
-## Business Context
+  To install necessary dependencies, run <code>npm install</code>.<br> 
+  axios
 
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+  ## Usage
+  The search function searches the whole word for what you enter in the box.
 
-## Acceptance Criteria
+  ## Screenshots
+  
 
-Given a table of random users, when the user loads the page, a table of employees should render.
+  ## Tests
+  N/A
+  
+  ## Contributing
 
-The user should be able to:
+  This was all thanks to training from the Georgia Tech Full Stack Flex program and tutors.
 
-- Sort the table by at least one category
+  ## Questions
+  I would be happy to take suggestions and questions directed to my AMA page:  
+  [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/m1cha3lnava/ama)
 
-- Filter the users by at least one property.
+  ## License
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+  MIT License
 
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
+  Copyright (c) [2020] [Michael Nava]
 
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
 
-Follow these guidelines for committing:
 
-- Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-- Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-- Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-## Submission on BCS
-
-You are required to submit the following:
-
-- the URL to the deployed application
-
-- the URL to the Github repository
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>

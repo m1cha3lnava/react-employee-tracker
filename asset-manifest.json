@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-employee-tracker/static/css/main.5bfc7251.chunk.css",
-    "main.js": "/react-employee-tracker/static/js/main.f2efa22d.chunk.js",
-    "main.js.map": "/react-employee-tracker/static/js/main.f2efa22d.chunk.js.map",
+    "main.js": "/react-employee-tracker/static/js/main.372e56f7.chunk.js",
+    "main.js.map": "/react-employee-tracker/static/js/main.372e56f7.chunk.js.map",
     "runtime-main.js": "/react-employee-tracker/static/js/runtime-main.0718a10a.js",
     "runtime-main.js.map": "/react-employee-tracker/static/js/runtime-main.0718a10a.js.map",
     "static/js/2.4fcf6706.chunk.js": "/react-employee-tracker/static/js/2.4fcf6706.chunk.js",
     "static/js/2.4fcf6706.chunk.js.map": "/react-employee-tracker/static/js/2.4fcf6706.chunk.js.map",
     "index.html": "/react-employee-tracker/index.html",
-    "precache-manifest.ac5b582ac85cfa297a367d5b372ad47f.js": "/react-employee-tracker/precache-manifest.ac5b582ac85cfa297a367d5b372ad47f.js",
+    "precache-manifest.88d535971f4a74d776e3fca9b467eb1d.js": "/react-employee-tracker/precache-manifest.88d535971f4a74d776e3fca9b467eb1d.js",
     "service-worker.js": "/react-employee-tracker/service-worker.js",
     "static/css/main.5bfc7251.chunk.css.map": "/react-employee-tracker/static/css/main.5bfc7251.chunk.css.map",
     "static/js/2.4fcf6706.chunk.js.LICENSE.txt": "/react-employee-tracker/static/js/2.4fcf6706.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0718a10a.js",
     "static/js/2.4fcf6706.chunk.js",
     "static/css/main.5bfc7251.chunk.css",
-    "static/js/main.f2efa22d.chunk.js"
+    "static/js/main.372e56f7.chunk.js"
   ]
 }
